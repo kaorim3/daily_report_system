@@ -28,7 +28,7 @@ public enum ForwardConst {
     CMD_DESTROY("destroy"),
 
     //jsp
-    FW__ERR_UNKNOWN("error/unknown"),
+    FW_ERR_UNKNOWN("error/unknown"),
     FW_TOP_INDEX("topPage/index"),
     FW_LOGIN("login/login"),
     FW__EMP_INDEX("employees/index"),
