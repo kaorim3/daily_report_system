@@ -1,13 +1,15 @@
 package constants;
+
 /**
  * DB関連の項目値を定義するインターフェース
  * ※インターフェイスに定義した変数は public static final 修飾子がついているとみなされる
  */
 public interface JpaConst {
-    //persistence-unit名
-    String PERSISTENCE_UNIT_NAME = "daily_report_sysytem";
 
-  //データ取得件数の最大値
+    //persistence-unit名
+    String PERSISTENCE_UNIT_NAME = "daily_report_system";
+
+    //データ取得件数の最大値
     int ROW_PER_PAGE = 15; //1ページに表示するレコードの数
 
     //従業員テーブル
@@ -27,7 +29,7 @@ public interface JpaConst {
     int EMP_DEL_TRUE = 1; //削除フラグON(削除済み)
     int EMP_DEL_FALSE = 0; //削除フラグOFF(現役)
 
-  //日報テーブル
+    //日報テーブル
     String TABLE_REP = "reports"; //テーブル名
     //日報テーブルカラム
     String REP_COL_ID = "id"; //id
@@ -47,8 +49,7 @@ public interface JpaConst {
     String JPQL_PARM_PASSWORD = "password"; //パスワード
     String JPQL_PARM_EMPLOYEE = "employee"; //従業員
 
-
-  //NamedQueryの nameとquery
+    //NamedQueryの nameとquery
     //全ての従業員をidの降順に取得する
     String Q_EMP_GET_ALL = ENTITY_EMP + ".getAll"; //name
     String Q_EMP_GET_ALL_DEF = "SELECT e FROM Employee AS e ORDER BY e.id DESC"; //query

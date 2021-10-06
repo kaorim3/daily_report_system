@@ -5,6 +5,7 @@ package constants;
  *
  */
 public enum ForwardConst {
+
     //action
     ACT("action"),
     ACT_TOP("Top"),
@@ -12,13 +13,12 @@ public enum ForwardConst {
     ACT_REP("Report"),
     ACT_AUTH("Auth"),
 
-
     //command
     CMD("command"),
     CMD_NONE(""),
     CMD_INDEX("index"),
     CMD_SHOW("show"),
-    CMD_SHOW_LOGIN("showlogin"),
+    CMD_SHOW_LOGIN("showLogin"),
     CMD_LOGIN("login"),
     CMD_LOGOUT("logout"),
     CMD_NEW("entryNew"),
@@ -31,7 +31,7 @@ public enum ForwardConst {
     FW_ERR_UNKNOWN("error/unknown"),
     FW_TOP_INDEX("topPage/index"),
     FW_LOGIN("login/login"),
-    FW__EMP_INDEX("employees/index"),
+    FW_EMP_INDEX("employees/index"),
     FW_EMP_SHOW("employees/show"),
     FW_EMP_NEW("employees/new"),
     FW_EMP_EDIT("employees/edit"),
@@ -43,21 +43,18 @@ public enum ForwardConst {
     /**
      * 文字列
      */
-
     private final String text;
 
     /**
      * コンストラクタ
      */
-
-    private ForwardConst(final String text){
+    private ForwardConst(final String text) {
         this.text = text;
     }
 
     /**
      * 値(文字列)取得
      */
-
     public String getValue() {
         return this.text;
     }
@@ -68,13 +65,13 @@ public enum ForwardConst {
      * @param 値(文字列)
      * @return ForwardConst型定数
      */
-
     public static ForwardConst get(String key) {
-        for(ForwardConst c: values()) {
+        for(ForwardConst c : values()) {
             if(c.getValue().equals(key)) {
                 return c;
             }
         }
         return CMD_NONE;
     }
+
 }
