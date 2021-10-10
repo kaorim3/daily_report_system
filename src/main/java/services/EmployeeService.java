@@ -179,7 +179,7 @@ public class EmployeeService extends ServiceBase {
      */
     public void destroy(Integer id) {
 
-        //idを条件に登録済みの従業員情報を取得する
+      //idを条件に登録済みの従業員情報を取得する
         EmployeeView savedEmp = findOne(id);
 
         //更新日時に現在時刻を設定する
@@ -191,7 +191,6 @@ public class EmployeeService extends ServiceBase {
 
         //更新処理を行う
         update(savedEmp);
-
     }
 
     /**
